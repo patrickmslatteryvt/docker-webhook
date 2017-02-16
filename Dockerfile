@@ -22,3 +22,4 @@ RUN         apk add --update -t build-deps curl go git libc-dev gcc libgcc && \
 EXPOSE      9000
 
 ENTRYPOINT  ["/usr/local/bin/webhook"]
+CMD ["-verbose", "-hooks=/etc/webhook/hooks.json", "-hotreload"]
